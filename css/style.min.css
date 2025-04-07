@@ -1168,12 +1168,12 @@ sup {
 }
 .section__title {
     text-align: center;
-    font-size: 22px;
+    font-size: clamp(18px, calc((22 / 1440) * 100vw), 22px);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 3.3px;
-    margin-bottom: 34px;
+    margin-bottom: clamp(10px, calc((34 / 1440) * 100vw), 34px);
 }
 .proc {
     color: #444;
@@ -1192,13 +1192,13 @@ sup {
     gap: 10px;
 }
 .proc__item {
-    max-width: 286px;
+    max-width: clamp(148px, calc((286 / 1440) * 100vw), 286px);
     border: 1px solid #fff;
 }
 .proc__item-title {
     text-align: center;
     font-family: 'SF Pro Display';
-    font-size: 18px;
+    font-size: clamp(10px, calc((18 / 1440) * 100vw), 18px);
     font-style: normal;
     font-weight: 700;
     line-height: 125%;
@@ -1207,7 +1207,7 @@ sup {
     padding-bottom: 10px;
 }
 .proc__item-text {
-    font-size: 14px;
+    font-size: clamp(9px, calc((14 / 1440) * 100vw), 14px);
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
@@ -2363,6 +2363,21 @@ svg {
     .nav__menu-text {
         display: none;
     }
+    .proc__inner {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .price__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .services__wrapper {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
 }
 @media (max-width: 1000px) {
     .hero__item img {
@@ -2385,6 +2400,9 @@ svg {
         width: clamp(266px, calc((471 / 1280) * 100vw), 471px);
         height: clamp(399px, calc((670 / 720) * 100vh), 670px);
         left: 20px;
+    }
+    .services__item {
+        order: 3;
     }
 }
 
@@ -2410,6 +2428,25 @@ svg {
     }
     .header-pad {
         padding-right: 0;
+    }
+    .proc__wrapper {
+        padding-top: 150px;
+    }
+    .proc__item-title {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        letter-spacing: 1.5px;
+    }
+    .proc__item-text {
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 9.372px;
+    }
+    .services__item-text {
+        font-size: 14px;
     }
 }
 @media (max-width: 646px) {
@@ -2461,6 +2498,22 @@ svg {
     .nav__menu-inner {
         gap: 10px;
     }
+    .proc__wrapper {
+        padding-top: 250px;
+    }
+    .proc {
+        margin-bottom: 50px;
+    }
+    .services__wrapper {
+        justify-content: start;
+    }
+    .services__inner {
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+    .services {
+        margin-bottom: 90px;
+    }
 }
 @media (max-width: 533px) {
     .hero {
@@ -2511,8 +2564,8 @@ svg {
         padding-top: 100px;
     }
     .hero::after {
-        width: 242px;
-        height: 372px;
+        width: 200px;
+        height: 300px;
     }
     .hero_inner::after {
         content: '“Помогу создать вам свой уникальный, модный и неотразимый стиль”';
@@ -2535,5 +2588,30 @@ svg {
     .hero__wrapper {
         justify-content: flex-start;
         padding-top: 100px;
+    }
+    .proc__wrapper {
+        padding-top: 350px;
+    }
+    .price__item-text {
+        font-size: 15px;
+    }
+    .price__item-title {
+        font-size: 20px;
+    }
+    .price__item-num {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .price__item-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+@media (max-width: 344px) {
+    .proc__wrapper {
+        padding-top: 600px;
+    }
+    .proc__item {
+        max-width: 300px;
     }
 }
