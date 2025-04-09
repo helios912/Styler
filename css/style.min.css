@@ -2170,7 +2170,7 @@ svg {
     position: absolute;
     width: 1350px;
     height: 150px;
-    left: 220px;
+    left: 37px;
     z-index: 10;
     -webkit-transform: translateY(50%);
     -ms-transform: translateY(50%);
@@ -2337,6 +2337,9 @@ svg {
         height: 708px;
         width: 419px;
     }
+    .btn_wrapper {
+        display: none;
+    }
 }
 @media (max-width: 1280px) {
     .header__wrapper {
@@ -2389,6 +2392,42 @@ svg {
     .about::after {
         top: -110px;
     }
+    .form-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .help::after {
+        left: 0;
+    }
+    .help__wrapper {
+        margin-left: 300px;
+    }
+    .form-container {
+        padding: 10px;
+    }
+    .result__wrapper {
+        justify-content: center;
+    }
+    .contacts__card-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .bonus::after {
+        right: 100px;
+    }
+    .tarif__wrapper {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .tarif__card {
+        padding: 20px;
+    }
+    .swiper-slide-text {
+        font-size: 12px;
+    }
 }
 @media (max-width: 1000px) {
     .hero__item img {
@@ -2428,6 +2467,28 @@ svg {
         right: 128px;
         height: 614px;
         width: 353px;
+    }
+    .how__inner {
+        justify-content: center;
+    }
+    .help__poriadok:first-child,
+    .help__poriadok:nth-child(2) {
+        padding-bottom: 0;
+    }
+    .services__wrapper {
+        gap: 30px;
+    }
+    .contacts__card {
+        padding: 10px;
+    }
+    .bonus {
+        display: none;
+    }
+    .footer__wrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -2476,6 +2537,87 @@ svg {
     .about::after {
         right: 46px;
     }
+    .help__bottom-item {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 40px;
+        padding: 10px;
+    }
+    .form-container {
+        flex-direction: column;
+    }
+    .help__poriadok:last-child {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .help {
+        padding-top: 370px;
+        background-image: none;
+        background-color: #828282;
+        position: relative;
+    }
+
+    .help::after {
+        content: '';
+        background-image: url(../images/help-mobil.png);
+        width: 295px;
+        height: 280px;
+        top: 90px;
+        left: 260px;
+    }
+    .help::before {
+        content: 'БЕСПЛАТНО ПРОКОНСУЛЬТИРУЮ ВАС СОЗДАНИЯ ЛИЧНОГО ИМИДЖА';
+        position: absolute;
+        top: 30px;
+        left: 234px;
+        text-align: center;
+        color: #e8e8e8;
+        font-size: 16px;
+        text-transform: uppercase;
+        width: 320px;
+    }
+    .help__wrapper {
+        margin: 0;
+        background-color: #fff;
+        color: #444;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .help__wrapper .help__title {
+        display: none;
+    }
+    .help__wrapper .help__title,
+    .help__wrapper .help__inner li,
+    .help__wrapper .help__name,
+    .help__wrapper .help__job {
+        color: #444;
+    }
+    .help__wrapper .help__inner li {
+        margin-left: 20px;
+        margin-bottom: 40px;
+        font-size: 12px;
+    }
+    .help__job {
+        margin-bottom: 0px;
+    }
+    .help__name {
+        order: 1;
+        text-align: center;
+        font-size: 16px;
+    }
+    .help__job {
+        order: 2;
+        text-align: center;
+        padding-bottom: 40px;
+        font-size: 14px;
+    }
+    .help__inner {
+        order: 3;
+    }
+    .swiper-slide-wrapper img {
+        width: 100%;
+    }
 }
 @media (max-width: 646px) {
     .nav__menu-soc {
@@ -2497,7 +2639,41 @@ svg {
     .hero__subtitle {
         margin-bottom: 10px;
     }
-    .hero::after {
+    .about__info-item {
+        max-width: 150px;
+    }
+    .how__item-content {
+        margin-bottom: 0px;
+    }
+    .how__inner {
+        gap: 20px;
+    }
+
+    .about__info-lisens {
+        justify-content: center;
+        gap: 10px;
+    }
+    .help__poriadok input {
+        padding: 13px 50px 13px 16px;
+    }
+    .help::after {
+        left: 150px;
+    }
+    .help::before {
+        left: 150px;
+    }
+    .help {
+        padding-bottom: 0;
+    }
+    .accordeon__triger {
+        padding-left: 20px;
+    }
+    .accordeon__content {
+        padding: 20px;
+        font-size: 12px;
+    }
+    .form__close {
+        right: 180px;
     }
 }
 @media (max-width: 600px) {
@@ -2591,6 +2767,13 @@ svg {
     .pad {
         padding-bottom: 200px;
     }
+    .about__info-content {
+        font-size: 14px;
+        padding-bottom: 0px;
+    }
+    .about__info-data {
+        margin-bottom: 60px;
+    }
 }
 @media (max-width: 533px) {
     .hero {
@@ -2635,6 +2818,10 @@ svg {
         width: 290px;
         top: -68px;
         right: 10px;
+    }
+    .help::after,
+    .help::before {
+        left: 50px;
     }
 }
 @media (max-width: 400px) {
@@ -2704,6 +2891,10 @@ svg {
         font-size: 16px;
         padding: 10px;
     }
+    .help::after,
+    .help::before {
+        left: 20px;
+    }
 }
 @media (max-width: 344px) {
     .proc__wrapper {
@@ -2711,5 +2902,12 @@ svg {
     }
     .proc__item {
         max-width: 300px;
+    }
+    .help::after {
+        left: 0px;
+    }
+    .help::before {
+        width: 300px;
+        left: 0;
     }
 }
